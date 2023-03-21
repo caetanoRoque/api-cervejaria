@@ -1,7 +1,8 @@
 const pg = require("pg")
-
+const env=require('dotenv')
+env.config()
 // Importando a URl do banco de dados
-const database = new pg.Client("postgres://pxblphjw:QDcJd6pt10oYD2gL_uznqLd2lVM2sLUJ@babar.db.elephantsql.com/pxblphjw")
+const database = new pg.Client(process.env.DT_BASE)
 
 // Condicionando a conexão do banco de dados com a API
 database.connect((erro)=>{

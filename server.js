@@ -5,6 +5,8 @@ const port = 3000
 const cervejaRoutes = require("./routes/cerveja.js")
 
 
+
+
 const app = express()
 app.use(bodyParser.json())
 // Definindo os endpoints
